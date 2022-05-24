@@ -26,9 +26,9 @@ module.exports.logIn = async (
     ]);
   }
 try {
-  await page.waitForSelector('#txt-username', { timeout: 5000 });
+  await page.waitForSelector('[class="uikit-text-field"]', { timeout: 5000 });
     
-  console.log('#txt-username found');
+  console.log('#txt-uikit-text-field found');
 } catch (error) {
   console.log("The element didn't appear.")
 }
