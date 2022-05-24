@@ -25,7 +25,9 @@ module.exports.logIn = async (
       page.waitForNavigation(),
     ]);
   }
+  await page.waitForTimeout(10000);
   await page.waitForSelector('#txt-username');
+  await page.waitForSelector('[name="username"]');
   if (username && password) {
     await page.type('#txt-username', username);
     await page.type('#txt-password', password);
